@@ -1,0 +1,265 @@
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    --main-color: #0099ff;
+    --secondary-color: #000b76;
+
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+}
+
+/*==================== BASE ====================*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+section{
+    width: 100%;
+    padding: 4rem 1rem;
+    margin: 0;
+    height: fit-content;
+    position: relative;
+}
+
+h1,h2,h3,h4{
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{ 
+    max-width: 100%;
+    height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.container{
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.flex{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+
+/*==================== NAV ====================*/
+header{
+    width: 100%;
+    padding: .5rem;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+    transition: .4s;
+    box-shadow: none;
+
+    background: rgba(255, 255, 255, 0.46);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(255, 255, 255, 0.49);
+}
+html:not([data-scroll='0']) header{
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+}
+
+header .container{
+    justify-content: space-between;
+}
+
+#menu{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    background: #fff;
+    transition: all .4s ease-in-out;
+    z-index: 9;
+}
+
+@media (max-width: 953px){
+    #menu{
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        height: 0;
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 100%;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    }
+
+    #menu.active{
+        height: calc(100vh - var(--header-height));
+    }
+}
+
+
+
+header .toggle{
+    width: 2.5rem;
+    margin-inline-end: 1rem;
+    display: none;
+    cursor: pointer;
+    display: none;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header .toggle::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform: translateY(5px);
+    background-color: var(--main-color);
+    transition: .4s;
+}
+
+header .toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+}
+
+header .toggle::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-5px);
+    background-color: var(--main-color);
+    transition: .4s;
+}
+
+header .toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+
+@media (max-width: 953px){
+    header .toggle{
+        display: flex;
+    }
+}
+
+#menu li{
+    margin: 0 .5rem ;
+    padding: 0;
+}
+
+#menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-size: .875rem;
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: .5rem 0;
+}
+
+#menu li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: .4s;
+}
+
+#menu li a:hover,
+#menu li a.active{
+    color: var(--secondary-color);
+}
+
+#menu li a:hover::after,
+#menu li a.active::after{
+    left: 0;
+    background-color: var(--secondary-color);
+}
+
+
+/*==================== Hero ====================*/
+
+#hero{
+    height: 100vh;
+}
+
+#hero .container{
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    align-items: center;
+}
+
+#hero .container .content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/*==================== Hero ====================*/
+#about{
+    text-align: center;
+}
+
+#about h1{
+    margin-bottom: 2rem;
+}
+
+#about p {
+    line-height: 1.6;
+}
+
+
+
+
+
