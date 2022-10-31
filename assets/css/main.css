@@ -27,6 +27,10 @@ html{
     scroll-padding-top: var(--header-height);
 }
 
+body{
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
 section{
     width: 100%;
     padding: 4rem 1rem;
@@ -38,6 +42,10 @@ section{
 
 h1,h2,h3,h4{
     font-weight: bold;
+}
+
+h2{
+    margin-bottom: 3rem;
 }
 
 ul{
@@ -380,6 +388,160 @@ header .toggle.active::after{
     margin: 0 auto;
     text-align: center;
 }
+
+/*==================== APPS ====================*/
+
+#apps{
+    
+}
+
+#apps h2{
+    margin-bottom: 3rem;
+}
+
+#apps .content{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    padding: 2rem 0;
+    align-items: center;
+}
+
+#apps .content .app {
+    padding: 2rem 4rem;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin: 0 auto;
+}
+
+#apps .content .app img{
+    width: 70px;
+}
+
+#apps .content h3{
+    margin-block: 1rem;
+}
+
+
+
+
+
+/*==================== TESTIMONIALS ====================*/
+#testimonials .content{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.testimonial blockquote {
+    margin: 10px 10px 0;
+    background: #efefef;
+    padding: 20px 60px;
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    font-style: italic;
+  }
+  
+  .testimonial blockquote:before,
+  .testimonial blockquote:after {
+    content: "\201C";
+    position: absolute;
+    font-size: 80px;
+    line-height: 1;
+    color: #757f9a;
+    font-style: normal;
+  }
+  
+  .testimonial blockquote:before {
+    top: 0;
+    left: 10px;
+  }
+  
+  .testimonial blockquote:after {
+    content: "\201D";
+    right: 10px;
+    bottom: -0.5em;
+  }
+  
+  .testimonial div {
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #efefef;
+    margin: 0 0 0 60px;
+  }
+  
+  .testimonial p {
+    margin: 8px 0 0 20px;
+    text-align: left;
+  }
+
+
+/*==================== CLIENTS ====================*/
+#clients{
+
+}
+
+#clients  h2{
+
+}
+
+#clients .content{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+#clients a{
+    width: fit-content;
+}
+
+#clients a img{
+    width: 150px;
+    height: 100px;
+    filter: grayscale();
+    transition: .4s;
+}
+
+#clients a:hover img{
+    filter: none;
+    transform: scale(1.1);
+}
+
+
+/*==================== GET STARTED ====================*/
+.get-started{
+background-color: #c1c1c1;
+}
+
+.get-started .container{
+    justify-content: center;
+}
+
+.get-started .container input{
+    min-width: 300px;
+    padding: 1rem ;
+    border-radius: .5rem;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.get-started .container button{
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    border: none;
+}
+
 
 
 
