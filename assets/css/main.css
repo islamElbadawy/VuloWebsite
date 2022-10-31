@@ -111,7 +111,7 @@ header .container{
     justify-content: center;
     align-items: center;
     color: var(--main-color);
-    background: #fff;
+    background: transparent;
     transition: all .4s ease-in-out;
     z-index: 9;
 }
@@ -119,18 +119,24 @@ header .container{
 @media (max-width: 953px){
     #menu{
         position: fixed;
-        top: var(--header-height);
+        top: 36px;
         left: 0;
         height: 0;
         flex-direction: column;
         row-gap: 1rem;
         width: 100%;
         transition: all .4s ease-in-out;
-        box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+        /* box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25); */
+
     }
 
     #menu.active{
-        height: calc(100vh - var(--header-height));
+        height: calc(100vh - 35px);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.2px);
+        -webkit-backdrop-filter: blur(5.2px);
+        border: 1px solid rgba(255, 255, 255, 0.49);
     }
 }
 
@@ -345,6 +351,37 @@ header .toggle.active::after{
 #management .content .tabcontent img{
     height: 300px;
 }
+
+
+/*==================== PRODUCTIVITY ====================*/
+
+#productivity h2{
+    margin-bottom: 3rem;
+}
+
+#productivity .content{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+
+#productivity .content img{
+    width: 70px;
+}
+
+#productivity .content h3{
+    margin-block: 1rem;
+}
+
+#productivity .content p{
+    /* padding-inline: 1rem; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 
 
 
