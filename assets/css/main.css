@@ -33,6 +33,7 @@ section{
     margin: 0;
     height: fit-content;
     position: relative;
+    text-align: center;
 }
 
 h1,h2,h3,h4{
@@ -246,7 +247,7 @@ header .toggle.active::after{
 }
 
 
-/*==================== Hero ====================*/
+/*==================== ABOUT ====================*/
 #about{
     text-align: center;
 }
@@ -259,6 +260,34 @@ header .toggle.active::after{
     line-height: 1.6;
 }
 
+
+/*==================== FEATURES ====================*/
+
+#features h2{
+    margin-bottom: 3rem;
+}
+
+#features .content{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+
+#features .content img{
+    width: 70px;
+}
+
+#features .content h3{
+    margin-block: 1rem;
+}
+
+#features .content p{
+    /* padding-inline: 1rem; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
 
 
 
