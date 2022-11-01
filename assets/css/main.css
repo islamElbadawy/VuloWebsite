@@ -61,6 +61,22 @@ img{
     height: auto;
 }
 
+input{
+    min-width: 300px;
+    padding: 1rem ;
+    border-radius: .5rem;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: #e1e1e1;
+}
+
+button{
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    border: none;
+}
+
 /*==================== REUSABLE CSS CLASSES ====================*/
 .container{
     max-width: 1140px;
@@ -242,19 +258,19 @@ header .toggle.active::after{
 }
 
 
-/*==================== Hero ====================*/
+/*==================== HOME ====================*/
 
-#hero{
+#home{
     height: 100vh;
 }
 
-#hero .container{
+#home .container{
     display: grid;
     grid-template-columns: repeat( 2, 1fr);
     align-items: center;
 }
 
-#hero .container .content{
+#home .container .content{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -416,8 +432,8 @@ header .toggle.active::after{
     justify-content: center;
 
     margin: 0 auto;
-    border-radius: 16px;
-    background: #eeeeee;
+    border-radius: 12px;
+    background: #fff;
     box-shadow:  6px 6px 12px #d6d6d6,
                 -6px -6px 12px #ffffff;
 }
@@ -427,7 +443,7 @@ header .toggle.active::after{
 }
 
 #apps .content h3{
-    margin-block: 1rem;
+    /* margin-block: 1rem; */
 }
 
 
@@ -526,7 +542,7 @@ background-color: #c1c1c1;
     justify-content: center;
 }
 
-.get-started .container input{
+/* .get-started .container input{
     min-width: 300px;
     padding: 1rem ;
     border-radius: .5rem;
@@ -539,7 +555,7 @@ background-color: #c1c1c1;
     padding: 1rem 1rem;
     border-radius: .5rem;
     border: none;
-}
+} */
 
 
 
