@@ -12,51 +12,50 @@
 </head>
 <body>
     <!--==================== HEADER ====================-->
-    <header>
+    <header id="header">
         <nav class="container flex">
             <a href="#" class="brand">
-                Vulo
+                vulo
             </a>
-            <a id="toggle" class="toggle"></a>
-            <ul id="menu" data-gumshoe>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#clients">Clients</a></li>
-            </ul>
+            
+            <button type="submit" class="empty">Get started</button>
         </nav>
     </header>
 
     <!--==================== HERO ====================-->
-    <section class="home" id="home">
+    <section class="home flex" id="home">
         <div class="container gird">
             <div class="content flex">
-                <h1>Vulo ERP Title</h1>
+                <h1><span>Vulo </span> ERP Reinvented</h1>
                 <p>
-                    Here we should put our tagline  
+                    ERP platform built on a 
+                    foundation of new concepts, bringing all the
+                    different business processes together in 
+                    one truly-fluid system  
                 </p>
-                <div class="contact">
-                    <form>
-                        <input type="email" placeholder="Email">
-                        <button type="submit">Get started</button>
-                    </form>
-                </div>
-                <a href="#about">Learn More</a>
+                <button type="submit" class="empty">Get started</button>
             </div>
             <div class="hero-img">
-                <img src="./assets/imgs/hero-img.svg" alt="Dashboard">
+                <img src="./assets/imgs/1-600.png" alt="Dashboard">
             </div>
         </div>
     </section>
 
     <!--==================== ABOUT ====================-->
-    <section class="about" id="about">
+    <section class="about flex" id="about">
         <div class="container">
-            <h2>About Vulo</h2>
+            <h2>What is Vulo</h2>
             <p>
                 Vulo is a modern ERP platform built on a 
-                foundation of new concepts,<br> bringing all the
+                foundation of new concepts, bringing all the
+                different business processes together in 
+                one truly-fluid system.
+                Vulo is a modern ERP platform built on a 
+                foundation of new concepts, bringing all the
+                different business processes together in 
+                one truly-fluid system.
+                Vulo is a modern ERP platform built on a 
+                foundation of new concepts, bringing all the
                 different business processes together in 
                 one truly-fluid system.
             </p>
@@ -69,7 +68,7 @@
             <h2>Features</h2>
             <div class="content grid">
                 <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
+                    <img src="./assets/imgs/cloud-network.png" alt="feature">
                     <h3>Cloud hosted</h3>
                     <p>
                         Vulo is a 
@@ -80,7 +79,7 @@
                     </p>
                 </div>
                 <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
+                    <img src="./assets/imgs/no-code.png" alt="feature">
                     <h3>No-code Software</h3>
                     <p>
                         No-Code, Agile. Without any coding, Vulo 
@@ -90,7 +89,7 @@
                     </p>
                 </div>
                 <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
+                    <img src="./assets/imgs/zero-it.png" alt="feature">
                     <h3>Zero IT</h3>
                     <p>
                         Vulo requires zero IT infrastructure 
@@ -101,7 +100,7 @@
                     </p>
                 </div>
                 <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
+                    <img src="./assets/imgs/fast-time.png" alt="feature">
                     <h3>Rapid Delivery</h3>
                     <p>
                         Vulo is delivered in weeks including customizations 
@@ -112,12 +111,46 @@
         </div>
     </section>
 
+    <!--==================== PRODUCTIVITY ====================-->
+    <section class="productivity" id="productivity">
+        <div class="container">
+            <h2>Improve Your Productivity</h2>
+            <div class="content grid">
+                <div class="feature">
+                    <img src="./assets/imgs/images.png" alt="feature">
+                    <h3>Images & Files</h3>
+                </div>
+                <div class="feature">
+                    <img src="./assets/imgs/excel.png" alt="feature">
+                    <h3>Data Exchange with Excel</h3>
+                </div>
+                <div class="feature">
+                    <img src="./assets/imgs/word.png" alt="feature">
+                    <h3>Print Using Word Templates</h3>
+                </div>
+                <div class="feature">
+                    <img src="./assets/imgs/notifications.png" alt="feature">
+                    <h3>System Notifications</h3>
+                </div>
+                
+                <div class="feature">
+                    <img src="./assets/imgs/collab.png" alt="feature">
+                    <h3>Team Chat Collaboration</h3>
+                </div>
+                <div class="feature">
+                    <img src="./assets/imgs/Work-on-the-go.png" alt="feature">
+                    <h3>Work on the go</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--==================== MANAGEMENT ====================-->
     <section class="management" id="management">
         <div class="container">
             <h2>Manage Your Bussiness</h2>
-            <div class="content grid">
-                <div class="tab">
+            <div class="content">
+                <div class="tab flex">
                     <button class="tablinks" onclick="openTab(event, 'automation')" id="defaultOpen">
                         Process Automation
                     </button>
@@ -133,74 +166,37 @@
                 </div>
                 <div id="automation" class="tabcontent">
                     <h3>Process Automation</h3>
-                    <p>This is feature description.</p>
-                    <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt="">
+                    <!-- <p>This is feature description.</p> -->
+                    <!-- <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt=""> -->
                 </div>
 
                 <div id="access" class="tabcontent">
                     <h3>Data Access Model</h3>
-                    <p>This is feature description.</p>
-                    <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt="">
+                    <!-- <p>This is feature description.</p> -->
+                    <!-- <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt=""> -->
                 </div>
 
                 <div id="analysis" class="tabcontent">
                     <h3>Reporting & Analysis</h3>
-                    <p>This is feature description.</p>
-                    <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt="">
+                    <!-- <p>This is feature description.</p> -->
+                    <!-- <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt=""> -->
                 </div>
 
                 <div id="integration" class="tabcontent">
                     <h3>Integration</h3>
-                    <p>This is feature description.</p>
-                    <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt="">
+                    <!-- <p>This is feature description.</p> -->
+                    <!-- <img src="./assets/imgs/undraw_financial_data_re_p0fl.svg" alt=""> -->
                 </div>
             </div>
         </div>
     </section>
-
-    <!--==================== PRODUCTIVITY ====================-->
-    <section class="productivity" id="productivity">
-        <div class="container">
-            <h2>Improve Your Productivity</h2>
-            <div class="content grid">
-                <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
-                    <h3>Images & Files</h3>
-                </div>
-                <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
-                    <h3>Data Exchange with Excel</h3>
-                </div>
-                <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
-                    <h3>Print Using Word Templates</h3>
-                </div>
-                <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
-                    <h3>System Notifications</h3>
-                </div>
-                
-                <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
-                    <h3>Team Chat Collaboration</h3>
-                </div>
-                <div class="feature">
-                    <img src="./assets/imgs/graphic-tablet.png" alt="feature">
-                    <h3>Continous Support</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
     <!--==================== GET STARTED ====================-->
-    <section class="get-started">
+    <section id="get-started" class="get-started">
         <div class="container flex">
-            <form>
-                <input type="email" placeholder="Email">
-                <button type="submit">Get started</button>
-            </form>
+            <h2>Ask for a demo for more information Just</h2>
+            <button type="submit" class="filled">Get started</button>
         </div>
     </section>
 
@@ -238,34 +234,6 @@
         </div>
     </section>
 
-    <!--==================== TESTIMONIALS ====================-->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="content grid">
-                <div class="testimonial">
-                    <blockquote>
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    </blockquote>
-                    <div></div>
-                    <p>
-                        John Doe &mdash; Worcestershire, UK
-                    </p>
-                </div>
-
-                <div class="testimonial">
-                    <blockquote>
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                    </blockquote>
-                    <div></div>
-                    <p>
-                        John Doe &mdash; Worcestershire, UK
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!--==================== CLIENTS ====================-->
     <section class="clients" id="clients">
@@ -296,14 +264,41 @@
         </div>
     </section>
 
+    
+    <!--==================== TESTIMONIALS ====================-->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="content grid">
+                <div class="testimonial">
+                    <blockquote>
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                    </blockquote>
+                    <div></div>
+                    <p>
+                        John Doe &mdash; Worcestershire, UK
+                    </p>
+                </div>
+
+                <div class="testimonial">
+                    <blockquote>
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                    </blockquote>
+                    <div></div>
+                    <p>
+                        John Doe &mdash; Worcestershire, UK
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!--==================== GET STARTED ====================-->
-    <section class="get-started">
+    <section id="get-started" class="get-started">
         <div class="container flex">
-            <form>
-                <input type="email" placeholder="Email">
-                <button type="submit">Get started</button>
-            </form>
+            <h2>Ask for a demo for more information Just</h2>
+            <button type="submit" class="filled">Get started</button>
         </div>
     </section>
 
@@ -316,6 +311,6 @@
 
 
     <!--==================== MAIN JS ====================-->
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
