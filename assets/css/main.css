@@ -187,6 +187,10 @@ button.empty:active{
     color: #000;
 }
 
+/* #header.scrolled .container .brand{
+    color: var(--main-color);
+} */
+
 #header .container{
     display: flex;
     justify-content: space-between;
@@ -646,13 +650,14 @@ button.empty:active{
     }
 }
 
-#footer .container .grid h1{
+#footer .container .grid .footer-brand{
     font-size: 2rem;
     font-weight: normal;
     margin-bottom: 2rem;
+    color: var(--secondary-color);
 }
 
-#footer .container .grid h1 span{
+#footer .container .grid .footer-brand span{
     display: block;
     font-size: 4rem;
     font-weight: 100;
@@ -660,6 +665,7 @@ button.empty:active{
 
 #footer .container .grid h2{
     margin-bottom: 2rem;
+    color: var(--secondary-color);
 }
 
 
