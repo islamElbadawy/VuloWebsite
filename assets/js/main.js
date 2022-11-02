@@ -1,7 +1,7 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/
+/*==================== TOGGLE HEADER STYLE ====================*/
 function toggleHeaderStyle(){
     const header = document.getElementById('header');
-    const headerBtn = document.querySelector('#header button')
+    const headerBtn = document.querySelector('#header a:last-child')
     window.onscroll = function() {
         if(window.scrollY > 48){
             header.classList.add('scrolled');

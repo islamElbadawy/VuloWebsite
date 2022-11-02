@@ -41,7 +41,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-section{
+section, .section{
     width: 100%;
     padding: 4rem 1rem;
     margin: 0;
@@ -86,7 +86,7 @@ img{
 
 input{
     min-width: 300px;
-    padding: 1rem ;
+    padding: 1rem 2rem;
     border-radius: .5rem;
     outline: none;
     box-shadow: none;
@@ -94,7 +94,8 @@ input{
     background-color: #e1e1e1;
 }
 
-button{
+a, button{
+    text-align: center;
     padding: .75rem 2rem;
     border-radius: .5rem;
     text-shadow: none;
@@ -102,15 +103,17 @@ button{
     margin: 0;
 }
 
-button.filled{
+a.filled, button.filled{
     border: 2px solid var(--main-color);
     background-color: var(--main-color);
     color: var(--secondary-color);
     transition: all .2s ease-in-out;
 }
 
+a.filled:hover,
 button.filled:hover,
-button.filled:active{
+button.filled:active,
+a.filled:active{
     border: 2px solid var(--main-color);
     background-color: transparent;
     color: var(--main-color);
@@ -118,6 +121,7 @@ button.filled:active{
 }
 
 
+a.empty,
 button.empty{
     border: 2px solid var(--secondary-color);
     background-color: transparent;
@@ -126,6 +130,8 @@ button.empty{
 }
 
 
+a.empty:hover,
+a.empty:active,
 button.empty:hover,
 button.empty:active{
     background-color: var(--secondary-color);
@@ -156,6 +162,9 @@ button.empty:active{
     gap: 1.5rem;
 }
 
+.red{
+    color: var(--main-color);
+}
 
 /*==================== NAV ====================*/
 #header{
@@ -169,8 +178,8 @@ button.empty:active{
     transition: .4s;
     box-shadow: none;
     color: var(--secondary-color);
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
+    /* border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem; */
 }
 
 #header.scrolled{
@@ -189,6 +198,7 @@ button.empty:active{
     font-size: 2.5rem;
     color: inherit;
     text-shadow: none;
+    padding: 0;
 }
 
 
@@ -601,7 +611,7 @@ button.empty:active{
     font-size: 4rem;
 }
 
-.get-started button{
+.get-started a{
     width: 250px;
     padding: 1rem 2rem;
     font-size: 1.5rem;
@@ -611,7 +621,82 @@ button.empty:active{
 
 /*==================== FOOTER ====================*/
 
+#footer{
+    background-color: #202124;
+    color: var(--secondary-color);
+    text-align: justify;
+    min-height: auto;
+}
 
+#footer .container{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4rem;
+}
+
+#footer .container .grid{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+}
+
+@media (max-width: 768px){
+    #footer .container .grid{
+        grid-template-columns: 1fr;
+        column-gap: 4rem;
+    }
+}
+
+#footer .container .grid h1{
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+#footer .container .grid h1 span{
+    display: block;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+#footer .container .grid h2{
+    margin-bottom: 2rem;
+}
+
+
+/*==================== CONTACT ====================*/
+
+#contact{
+    background-color: var(--main-color);
+    min-height: 100vh;
+}
+
+#contact .container{
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contact .container h1{
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+#contact .container form{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .container form input{
+    flex: 1;
+}
+
+#contact .container form button{
+    width: 150px;
+    padding-block: 1rem;
+}
 
 
 
