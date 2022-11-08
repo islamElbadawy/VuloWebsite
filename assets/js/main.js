@@ -34,10 +34,31 @@ function openTab(evt, tabName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen")?.click();
 
 
 
 var onloadCallback = function() {
     alert("grecaptcha is ready!");
-  };
+};
+
+
+/*==================== FIREBASE CONNECTIONS ====================*/
+// const inbox = db.collection("inbox");
+// const msg ={
+//     email: "mail@mail.com",
+//     message: "This is a message from vulo"
+// }
+// async function addMsg(msg){
+//     try{
+//         const docRef = await inbox.add(msg)
+//         console.log(docRef);
+//     }
+//     catch{
+//         console.log(error);
+//     }
+// }
+
+// addMsg(msg)
+
+

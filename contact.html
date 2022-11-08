@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
+    </script>
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -30,9 +31,13 @@
             <div class="content flex">
                 <h2>Contact Our Sales Team</h2>
                 <form action="" class="flex" id="form">
-                    <input type="email" placeholder="Email">
-                    <textarea name="" id="" placeholder="Message"></textarea>
-                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                    <input id="email" type="email" placeholder="Email">
+                    <textarea name="" id="message" placeholder="Message"></textarea>
+                    <div
+                        class="g-recaptcha"
+                        data-sitekey="site-key"
+                    >
+                    </div>
                     <button class="empty g-recaptcha" 
                             data-sitekey="reCAPTCHA_site_key" 
                             data-callback='onSubmit' 
@@ -61,6 +66,58 @@
     <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
         async defer>
     </script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js'
+        import { getFirestore,collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js'
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCJ2vqEtj0BSgxezw9DLEm6YSM1a-nGqcE",
+            authDomain: "vulo-public-website.firebaseapp.com",
+            projectId: "vulo-public-website",
+            storageBucket: "vulo-public-website.appspot.com",
+            messagingSenderId: "49288096635",
+            appId: "1:49288096635:web:f850a27c30c9b5dfcaabde"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const inboxCol = collection(db, 'inbox');
+
+        
+        async function addMsg(msg){
+            try{
+                const docRef = addDoc(inboxCol, msg);
+                console.log(docRef.id);
+                const params = {
+                    from_name: 'Vulo',
+                    email: msg.email,
+                    message: msg.message
+                }
+                emailjs.send('service_ynvm2wo', 'template_8mr1115', params, 'fxjCYS4AfJ3uFUmE1');
+                // emailjs.init('fxjCYS4AfJ3uFUmE1');
+            }
+            catch{
+                console.log(error);
+            }
+        }
+
+        const form = document.getElementById('form')
+
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const msg = document.getElementById("message").value;
+            const message ={
+                email: email,
+                message: msg
+            }
+            addMsg(message)
+        })
+
+
+    </script>
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
 </body>
